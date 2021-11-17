@@ -96,17 +96,17 @@ const Login = (props) => {
     );
   };
 
-  // const validateEmailHandler = () => {
-  //   dispactEmail({
-  //     type: "INPUT_BLUR",
-  //   })
-  // };
+  const validateEmailHandler = () => {
+    dispactEmail({
+      type: "INPUT_BLUR",
+    })
+  };
 
-  // const validatePasswordHandler = () => {
-  //   dispactPassword({
-  //     type: "INPUT_BLUR",
-  //   })
-  // };
+  const validatePasswordHandler = () => {
+    dispactPassword({
+      type: "INPUT_BLUR",
+    })
+  };
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -127,7 +127,7 @@ const Login = (props) => {
             id="email"
             value={emailState.value}
             onChange={emailChangeHandler}
-            // onBlur={validateEmailHandler}
+            onFocus={validateEmailHandler}
           />
         </div>
         <div
@@ -141,7 +141,7 @@ const Login = (props) => {
             id="password"
             value={passwordState.value}
             onChange={passwordChangeHandler}
-            // onBlur={validatePasswordHandler}
+            onFocus={validatePasswordHandler}
           />
         </div>
         <div className={classes.actions}>
